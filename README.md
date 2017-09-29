@@ -3,17 +3,16 @@
 
 Overview
 ---
-In this project, you will use what you've learned about deep neural networks and convolutional neural networks to classify traffic signs. You will train and validate a model so it can classify traffic sign images using the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). After the model is trained, you will then try out your model on images of German traffic signs that you find on the web.
+In this project, I use convolutional neural networks to classify traffic signs in the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). After the model is trained, I try out the model on some images of traffic signs that I find on the web. This is the second project of udacity self-driving car engineer nanodegree. The codes are in Traffic_Sign_Classifier.ipynb. 
 
-The Project
+### What I did 
 ---
-The goals / steps of this project are the following:
-* Load the data set
-* Explore, summarize and visualize the data set
-* Design, train and test a model architecture
-* Use the model to make predictions on new images
-* Analyze the softmax probabilities of the new images
-* Summarize the results with a written report
+The steps of this project are the following:
+* Load the data set. The data are preprocessed into training data and test data. There are 39209 training examples and 12630 testing examples. 
+* Explore and visualize the data set. I conduct a histgram of the labels in the training set and test set. I find that the distributions in the training set and test set are not the same. 
+* Preprocess the data so that it has zero mean and the same variance.  Then, I do train-validation split, and generate additional data by rotate the images in the training dataset by [-15, 15] degrees. The size of the training dataset is trippled. 
+* Implement a 5 layer neural network with first 2 layer convolutional layers. 
+* Use the model to make predictions on 5 new images online. 
 
 ### Dependencies
 This lab requires:
